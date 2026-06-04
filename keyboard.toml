@@ -20,6 +20,7 @@ col_pins = ["GPIO7", "GPIO8"]
 [layout]
 rows = 2
 cols = 2
+layers = 1
 keymap = [
     [
         ["A", "B"],
