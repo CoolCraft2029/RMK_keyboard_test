@@ -9,8 +9,8 @@ chip = "esp32c3"
 
 [matrix]
 # Row and col pins are mandatory
-row_pins = ["PIN_5", "PIN_6"]
-col_pins = ["PIN_7", "PIN_8", ]
+row_pins = ["GPIO5", "GPIO6"]
+col_pins = ["GPIO7", "GPIO8"]
 
 # RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
 # row2col = true
