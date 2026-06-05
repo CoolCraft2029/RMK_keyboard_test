@@ -11,3 +11,21 @@ jobs:
     with:
       keyboard_toml_path: "keyboard.toml"
       vial_json_path: "vial.json"
+  
+  upload-artifacts:
+    needs: build
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+      
+      - name: Upload firmware artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: keyboard-firmware
+          path: |
+            **/firmware.bin
+            **/firmware.elf
+            **/firmware.uf2
+          retention-days: 30
